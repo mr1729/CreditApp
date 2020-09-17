@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Vehicle} from '../shared/vehicle';
 
 @Component({
   selector: 'app-vehicle-selection',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleSelectionComponent implements OnInit {
 
+  vehicles: Vehicle[];
+  
   constructor() { }
 
   ngOnInit(): void {
