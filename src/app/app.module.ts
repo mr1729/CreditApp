@@ -8,8 +8,7 @@ import { VehicleSelectionComponent } from './vehicle-selection/vehicle-selection
 import { ApplicantDetailsComponent } from './applicant-details/applicant-details.component';
 import { DealerFinancingComponent } from './dealer-financing/dealer-financing.component';
 import {MatExpansionModule} from '@angular/material/expansion';
-//import {MatAccordion} from '@angular/material/expansion';
-
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +20,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
