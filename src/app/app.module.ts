@@ -9,6 +9,10 @@ import { ApplicantDetailsComponent } from './applicant-details/applicant-details
 import { DealerFinancingComponent } from './dealer-financing/dealer-financing.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,11 @@ import {MatInputModule} from '@angular/material/input';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    FlexLayoutModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

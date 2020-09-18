@@ -5,14 +5,44 @@
                Vehicle selection
            </mat-panel-title>
        </mat-expansion-panel-header>
-       <mat-form-field> 
-        <mat-label>ZIPCODE</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <div *ngif="vehicles">
-
+       <div fxLayout="row wrap" fxLayoutGap="32px">
+             <div>
+               <mat-form-field> 
+                  <mat-label>ZIPCODE</mat-label>
+                  <input name="zip" matInput [(ngModel)]="zip">
+                </mat-form-field>
+             </div>
+             <div>
+               <button mat-raised-button color="warn" (click)="clickfunction()">GO</button>
+             </div>  
+        </div>
+        {{zip}}
+      <div *ngIf="vehicles" flexLayout="coloumn" fxLayoutAlign="space-evenly center">
+          {{vehicles | json}}
       </div>
-
    </mat-expansion-panel>
+
+<mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Vehicle selection
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Vehicle selection
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
+
+<mat-expansion-panel [disabled]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Vehicle selection
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+</mat-expansion-panel>
   
