@@ -19,6 +19,5 @@ export class VehicleinzipService {
        }
        return this.v;
   }    
-
-
+        
 }

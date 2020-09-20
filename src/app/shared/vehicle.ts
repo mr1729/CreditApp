@@ -5,4 +5,5 @@ export class Vehicle{
     year: number;
     price: number;
     destination_charges:number;
+    image_url: string;
 }

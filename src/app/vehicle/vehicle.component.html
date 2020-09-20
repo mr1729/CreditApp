@@ -1,0 +1,12 @@
+
+<div fxLayout="row wrap" fxLayoutGap="18px">
+    <mat-card  *ngFor="let vehicle of v_list" class="mat">
+        <mat-card-header>
+            <mat-card-title>{{v_list.name}}</mat-card-title>
+            <mat-card-subtitle>{{vehicle.model}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="/assets/img/{{vehicle.type}}/{{vehicle.name}}.png">
+      </mat-card>
+</div>
+
+

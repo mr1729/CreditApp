@@ -16,11 +16,30 @@
                <button mat-raised-button color="warn" (click)="clickfunction()">GO</button>
              </div>  
         </div>
-        {{zip}}
-      <div *ngIf="vehicles" flexLayout="coloumn" fxLayoutAlign="space-evenly center">
-          {{vehicles | json}}
+        
+      <div *ngIf="vehicles" fxLayout="coloumn " >
+          
+          
+            <mat-tab-group mat-align-tabs="center" class="mattab">
+               <mat-tab label="Car">
+                   <app-vehicle [v_list] = "car_list"></app-vehicle>
+                </mat-tab>
+               <mat-tab label="Truck">
+                   <app-vehicle  [v_list] = "truck_list"></app-vehicle>
+                </mat-tab>
+               <mat-tab label="Suv">
+                   <app-vehicle  [v_list] = "suv_list"></app-vehicle>
+                </mat-tab>
+               <mat-tab label="Hybrid">
+                   <app-vehicle  [v_list] = "hybrid_list"></app-vehicle>
+                </mat-tab>
+            </mat-tab-group>            
+         
+
       </div>
+
    </mat-expansion-panel>
+
 
 <mat-expansion-panel [disabled]="true">
     <mat-expansion-panel-header>

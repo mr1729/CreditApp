@@ -13,12 +13,17 @@ import {MatButtonModule} from '@angular/material/button';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
     VehicleSelectionComponent,
     ApplicantDetailsComponent,
-    DealerFinancingComponent
+    DealerFinancingComponent,
+    VehicleComponent  
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,9 @@ import {FormsModule} from '@angular/forms';
     MatButtonModule,
     FlexLayoutModule,
     HttpClientModule,
-    FormsModule
+    MatTabsModule,
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
