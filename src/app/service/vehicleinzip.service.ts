@@ -9,6 +9,7 @@ import {Vehicle} from '../shared/vehicle';
 export class VehicleinzipService {
 
   v: Vehicle[];
+  s: any;
   constructor(private call:HttpClient){ }
 
   getVehiclesinZip(Zip:string){
@@ -19,5 +20,12 @@ export class VehicleinzipService {
        }
        return this.v;
   }    
-        
+
+  getZips(): any {
+     this.call.get<any>("http://localhost:8080/get")
+              .subscribe(st => this.s=st);
+             
+              return this.s;
+  }
+     
 }

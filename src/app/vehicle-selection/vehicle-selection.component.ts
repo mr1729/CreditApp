@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Vehicle} from '../shared/vehicle';
 import {VehicleinzipService} from '../service/vehicleinzip.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-vehicle-selection',
@@ -16,33 +17,49 @@ export class VehicleSelectionComponent implements OnInit {
   suv_list: Vehicle[];
   hybrid_list: Vehicle[];
   
+  s: string[] = ['name','maim'];
+
+  logger:Observable<any>;
+
   constructor(public zipservice: VehicleinzipService) { }
 
   ngOnInit(): void {
+    this.s=this.zipservice.getZips();
+    console.log(this.s);
   }
 
   clickfunction(){  
+    console.log(this.s);
+    
 
     if(this.zip){
-     this.vehicles = [{name: "Hello",
+     this.vehicles = [{name: "86",
                        model: "Hello",
-                       type: "Hello",
+                       type: "car",
                        year: 2018,
                        price: 65000,
                        destination_charges:995,
-                      image_url: "../assets/img"
+                      image_url: "../assets/img/car/86.png"
                      }];
 
-   
-   this.vehicles = this.zipservice.getVehiclesinZip(this.zip);
+   //this.vehicles = this.zipservice.getVehiclesinZip(this.zip);
 
    this.sortlists();
+   
    }
    else{
      this.zip ="75039";
+     
    }
 
   }
+
+  private _filter(name: string): string[] {
+    const filterValue = name.toLowerCase();
+
+    return this.s.filter(option => option.indexOf(filterValue) === 0);
+  }
+
 
   sortlists(){
 
@@ -61,7 +78,6 @@ export class VehicleSelectionComponent implements OnInit {
                        destination_charges:995,
                       image_url: "../assets/img"
                      }];
-    
 
   }
  
