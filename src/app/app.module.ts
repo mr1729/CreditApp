@@ -16,6 +16,7 @@ import {FormsModule} from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     MatTabsModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatAutocompleteModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
